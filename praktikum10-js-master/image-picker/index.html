@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTIKUM 2 - Kurs Kalkulator</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "fuchsia";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["Bunga Dahlia.jpg", "Bunga Tulip.jpg", "Bunga Mawar.jpg", "Bunga Melati.jpg", "Bunga Matahari.jpg", "Bunga Sakura.jpg"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "Bunga Dahlia") {
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar bunga dahlia.jpg")
+            }
+            
+
+            if(pilihan.value == "Bunga Tulip") {
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar bunga tulip.jpg")
+            }
+
+            if(pilihan.value == "Bunga Mawar") {
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Bunga Mawar.jpg")
+            }
+
+            if(pilihan.value == "Bunga Melati") {
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Bunga Melati.jpg")
+            }
+
+            if(pilihan.value == "Bunga Matahari") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Bunga Matahari.jpg")
+            }
+
+            if(pilihan.value == "Bunga Sakura") {
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Bunga Sakura.jpg")
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Ahda Ihsani's Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="Bunga Dahlia">Bunga Dahlia</option>
+        <option value="Bunga Tulip">Bunga Tulip</option>
+        <option value="Bunga Mawar">Bunga Mawar</option>
+        <option value="Bunga Melati">Bunga Melati</option>
+        <option value="Bunga Matahari">Bunga Matahari</option>
+        <option value="Bunga Sakura">Bunga Sakura</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
